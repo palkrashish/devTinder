@@ -2,6 +2,10 @@ const express = require("express");
 
 const app = express()
 
+app.get((req, res) => {
+    res.send("ha ha ha ha!")
+})
+
 app.get("/", (req, res) => {
     res.send("Hello World!")
 })
