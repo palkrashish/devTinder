@@ -19,7 +19,26 @@ app.get('/fetch', (req, res) => {
 })
 
 app.get('/Test', (req, res) => {
-    res.send('Hell Test!')
+    res.send({
+         firstname: 'Ashish',
+         lastName :'Pal'
+        });
+})
+
+app.post('/user', (req, res) => {
+    // Saveing data into DB
+    res.send("Data has been saved successfully")
+})
+
+
+app.delete('/user', (req, res) => {
+    // Deleting data from DB
+    res.send("Data has been deleted successfully")
+})
+
+app.put('/user', (req, res) => {
+    // Updating data in DB
+    res.send("Data has been updated successfully")
 })
 
 // This is handle all type of request
