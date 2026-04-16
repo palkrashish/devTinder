@@ -10,10 +10,13 @@ app.get('/user', (req, res) => {
 })
 
 app.use("/test", (req, res) => {
-    // res.send("hahaha user");
+    console.log("1st response");
+    next()
+    res.send("hahaha user");
 },
 
 (req, res) =>{
+    console.log("2nd response");
     res.send('2nd response');
 })
 
