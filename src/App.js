@@ -4,9 +4,17 @@ const app = express()
 
 app.get('/user', (req, res) => {
     res.send({
-         firstname: 'Ashish',
-         lastName :'Pal'
-        });
+        firstname: 'Ashish',
+        lastName: 'Pal'
+    });
+})
+
+app.use("/test", (req, res) => {
+    // res.send("hahaha user");
+},
+
+(req, res) =>{
+    res.send('2nd response');
 })
 
 
