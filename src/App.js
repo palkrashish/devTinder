@@ -9,16 +9,16 @@ app.get('/user', (req, res) => {
     });
 })
 
-app.use("/test", (req, res) => {
+app.use("/test", (req, res, next) => {
     console.log("1st response");
-    next()
     res.send("hahaha user");
+    next()
 },
 
-(req, res) =>{
-    console.log("2nd response");
-    res.send('2nd response');
-})
+    (req, res) => {
+        console.log("2nd response");
+        res.send('2nd response');
+    })
 
 
 app.listen(3000, () => {
